@@ -26,7 +26,6 @@ function App() {
     <div className="text-default min-h-screen bg-white">
 
       {isInEducator ? null : <Navbar />}
-      {isInEducator ? null : <Hero />}
 
       <Routes>
 

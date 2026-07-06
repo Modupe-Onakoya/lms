@@ -7,7 +7,7 @@ const Companies = () => {
             <h1>
                 Trusted by learners from
             </h1>
-            <div className='flex gap-10 pt-5 flex-wrap  justify-center '>
+            <div className='flex gap-10 pt-3 flex-wrap  justify-center '>
                 <img src={assets.microsoft_logo} alt="" className='max-sm:w-18' />
                 <img src={assets.walmart_logo} alt="" className='max-sm:w-18' />
                 <img src={assets.accenture_logo} alt="" className='max-sm:w-18' />

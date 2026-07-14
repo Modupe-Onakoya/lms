@@ -18,7 +18,7 @@ const CourseSection = () => {
             </p>
             {/* <CourseCard /> */}
 
-            <div className='space-y-3 md:flex gap-10 pt-5 '>
+            <div className='space-y-3 md:flex gap-2 pt-5 '>
 
                 {allCourses.slice(0, 4).map((course, index) => (<CourseCard key={index} course={course} />))}
             </div>

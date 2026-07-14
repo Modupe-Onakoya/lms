@@ -9,6 +9,7 @@ export const AppContext = createContext()
 export function AppContextProvider(props) {
     const currency = import.meta.env.VITE_CURRENCY
     const [allCourses, setAllCourses] = useState([])
+    const [isEducator, setIsEducator] = useState(true)
     const navigate = useNavigate()
 
     //Fetch all courses
@@ -24,22 +25,22 @@ export function AppContextProvider(props) {
 
     // Function to calculate average rating of course 
 
-    const calculateRting = (course) => {
+    const calculateRating = (course) => {
 
-        if (course.courseRating.length === 0) {
+        if (course.courseRatings.length === 0) {
             return 0
         }
         let totalRating = 0
 
-        course.courseRating.forEach(rating => {
+        course.courseRatings.forEach(rating => {
             totalRating += rating.rating
         })
 
-        return totalRating / course.courseRating.length
+        return totalRating / course.courseRatings.length
     }
 
     const value = {
-        currency, allCourses, navigate, calculateRting
+        currency, allCourses, navigate, calculateRating, isEducator, setIsEducator
     }
 
     return (

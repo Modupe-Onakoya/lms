@@ -13,7 +13,7 @@ const Footer = () => {
                     <p className='max-md:text-center font-bold'>
                         Company
                     </p>
-                    <ul className='flex gap-3 md:flex-col py-2'>
+                    <ul className='flex gap-3 md:flex-col py-2 '>
                         <li>Home</li>
                         <li>About us</li>
                         <li>Contact us</li>

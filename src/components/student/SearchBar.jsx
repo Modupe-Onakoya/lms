@@ -7,18 +7,20 @@ const SearchBar = ({ data }) => {
     const navigate = useNavigate()
 
     function searchItem(e) {
-        e.preventDefault
+        e.preventDefault()
         navigate("/course-list/" + input)
+        console.log(input)
 
     }
 
 
 
     return (
-        <form onSubmit={searchItem} className=' max-w-xl border border-gray-300 flex rounded-lg pl-2 items-center'>
-            <img src={assets.search_icon} alt="" className='w-4 ' />
-            <input type="text" placeholder='Search for courses' value={input} className='w-full h-full outline-none' onChange={(e) => { setInput(e.target.value) }} />
-            <button type='submit' className='text-white bg-blue-600 md:px-6 px-2 py-1 h-fit rounded-sm' >search</button>
+        <form onSubmit={searchItem} className=' max-w-xl border border-gray-300 flex rounded-lg px-2 items-center py-2'>
+            <img src={assets.search_icon} alt="" className='w-3' />
+            <input type="text" placeholder='Search for courses' value={input} className='px-1 text-[14px] outline-none' onChange={(e) => { setInput(e.target.value) }} />
+            <button type='submit' className='bg-blue-600 text-white text-[14px] px-3 py-1 rounded-sm'>Search</button>
+
         </form>
 
     )
